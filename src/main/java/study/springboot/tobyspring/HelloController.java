@@ -1,6 +1,5 @@
 package study.springboot.tobyspring;
 
-import java.util.Objects;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,7 +13,10 @@ public class HelloController {
 
     @GetMapping("/hello") // DispatcherServlet은 Bean을 다 뒤져서 해당 정보를 찾음.
     public String hello(String name) {
-        return helloService.sayHello(Objects.requireNonNull(name));
+        if (name == null || name.trim().length() == 0) {
+            throw new IllegalArgumentException();
+        }
+        return helloService.sayHello(name);
     }
 
 }
