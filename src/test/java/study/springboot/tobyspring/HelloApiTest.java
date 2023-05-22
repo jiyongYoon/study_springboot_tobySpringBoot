@@ -20,7 +20,7 @@ public class HelloApiTest {
         // 검증
         assertThat(res.getStatusCodeValue()).isEqualTo(HttpStatus.OK.value());
         assertThat(res.getHeaders().getContentType().toString()).startsWith(MediaType.TEXT_PLAIN_VALUE);
-        assertThat(res.getBody()).isEqualTo("Hello, YOON");
+        assertThat(res.getBody()).isEqualTo("*Hello, YOON*");
     }
 
     @Test

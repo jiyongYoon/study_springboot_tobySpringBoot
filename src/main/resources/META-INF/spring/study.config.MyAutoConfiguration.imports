@@ -1,0 +1,2 @@
+study.config.autoconfig.DispatcherServletConfig
+study.config.autoconfig.TomcatWebServerConfig
