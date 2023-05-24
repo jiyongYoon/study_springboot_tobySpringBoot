@@ -1,4 +1,4 @@
-package study.springboot.configtest;
+package study.springboot.studytest;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;

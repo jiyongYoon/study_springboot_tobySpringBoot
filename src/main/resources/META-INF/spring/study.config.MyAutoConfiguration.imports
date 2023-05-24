@@ -1,2 +1,3 @@
 study.config.autoconfig.DispatcherServletConfig
 study.config.autoconfig.TomcatWebServerConfig
+study.config.autoconfig.JettyWebServerConfig
