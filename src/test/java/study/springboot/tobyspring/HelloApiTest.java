@@ -12,9 +12,10 @@ public class HelloApiTest {
 
     @Test
     void helloApi() {
+
         TestRestTemplate rest = new TestRestTemplate();
         // 요청 만들어서 보내기
-        ResponseEntity<String> res = rest.getForEntity("http://localhost:8080/hello?name={name}",
+        ResponseEntity<String> res = rest.getForEntity("http://localhost:9090/app2/hello?name={name}",
             String.class, "YOON");
 
         // 검증
@@ -27,10 +28,10 @@ public class HelloApiTest {
     void failsHelloApi() {
         TestRestTemplate rest = new TestRestTemplate();
         // 요청 만들어서 보내기
-        ResponseEntity<String> res = rest.getForEntity("http://localhost:8080/hello?name={name}",
+        ResponseEntity<String> res = rest.getForEntity("http://localhost:9090/app2/hello?name={name}",
             String.class, "");
 
-        ResponseEntity<String> res2 = rest.getForEntity("http://localhost:8080/hello?name=",
+        ResponseEntity<String> res2 = rest.getForEntity("http://localhost:9090/app2/hello?name=",
             String.class);
 
         // 검증

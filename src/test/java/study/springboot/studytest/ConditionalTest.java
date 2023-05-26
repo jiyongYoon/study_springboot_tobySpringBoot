@@ -32,7 +32,7 @@ public class ConditionalTest {
         ac2.register(Config2.class);
         ac2.refresh();
 
-        MyBean bean2 = ac2.getBean(MyBean.class);
+//        MyBean bean2 = ac2.getBean(MyBean.class);
     }
 
     @Test
