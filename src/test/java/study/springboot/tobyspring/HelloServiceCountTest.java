@@ -1,14 +1,15 @@
-package study.springboot;
+package study.springboot.tobyspring;
 
 import java.util.stream.IntStream;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import study.springboot.tobyspring.HelloBootTest;
-import study.springboot.tobyspring.HelloRepository;
-import study.springboot.tobyspring.HelloService;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
+import org.springframework.transaction.annotation.Transactional;
 
-@HelloBootTest
+@SpringBootTest(webEnvironment = WebEnvironment.NONE)
+@Transactional
 public class HelloServiceCountTest {
 
     @Autowired

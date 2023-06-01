@@ -1,0 +1,11 @@
+###
+GET http://localhost:9090/app2/hello?name=YOON
+
+###
+POST http://localhost:9090/app2/hello?name=YOON
+
+###
+GET http://localhost:9090/app2/count?name=YOON
+
+###
+GET http://localhost:9090/app2/count?name=Toby
